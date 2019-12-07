@@ -1,6 +1,6 @@
 # demo_setup.yml
 
-- hosts: all
+- hosts: localhost
   gather_facts: False
   tasks:
 
