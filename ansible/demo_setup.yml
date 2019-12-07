@@ -1,14 +1,14 @@
 # demo_setup.yml
 
-- hosts: localhost
+- hosts: all
   gather_facts: False
-
   tasks:
 
     - name: Provision an ubuntu instance
       ec2:
         key_name: "MyKeyPair"
         group: test
+        region: "eu-west-3"
         instance_type: t2.micro
         image: ami-087855b6c8b59a9e4 
         wait: true
