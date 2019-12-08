@@ -6,11 +6,10 @@
 
     - name: Provision an ubuntu instance
       ec2:
-        key_name: "MyKeyPair"
-        group: test
-        region: "eu-west-3"
+        key_name: "{{ key_name }}"
         instance_type: t2.micro
-        image: ami-087855b6c8b59a9e4 
+        image: "{{ image }}"
+        region: "{{ region }}"
         wait: true
         exact_count: 1
         count_tag:
